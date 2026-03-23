@@ -17,6 +17,7 @@
     "db:push": "prisma db push",
     "db:reset": "prisma migrate reset --force",
     "db:studio": "prisma studio",
+    "db:seed": "prisma db seed",
     "db:status": "prisma migrate status",
     "docker:db:up": "docker compose up -d db",
     "docker:db:down": "docker compose stop db",

@@ -7,10 +7,10 @@ RUN npm ci
 
 COPY . .
 
-RUN npx prisma generate
+RUN npm run db:generate
 RUN npm run build
 
 EXPOSE 3000
 
 # Migrations, example seed row, then API (Railway / Compose)
-CMD ["sh", "-c", "npx prisma migrate deploy && npx prisma db seed && node dist/server.js"]
+CMD ["sh", "-c", "npm run db:migrate:deploy && npm run db:seed && node dist/server.js"]

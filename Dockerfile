@@ -10,7 +10,7 @@ COPY . .
 RUN npm run db:generate
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE 5000
 
 # Migrations, example seed row, then API (Railway / Compose)
 CMD ["sh", "-c", "npm run db:migrate:deploy && npm run db:seed && node dist/server.js"]
